@@ -1,0 +1,51 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/features/Chat/Chat.tsx":
+/*!************************************!*\
+  !*** ./src/features/Chat/Chat.tsx ***!
+  \************************************/
+/*! exports provided: Chat */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Chat\", function() { return Chat; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ \"./node_modules/@material-ui/core/esm/index.js\");\n/* harmony import */ var _Socket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Socket */ \"./src/Socket.tsx\");\n/* harmony import */ var _top_topSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../top/topSlice */ \"./src/features/top/topSlice.ts\");\n/* harmony import */ var _chatSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chatSlice */ \"./src/features/Chat/chatSlice.ts\");\n/* harmony import */ var _ChatStyle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ChatStyle */ \"./src/features/Chat/ChatStyle.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nfunction Chat() {\r\n    var classes = Object(_ChatStyle__WEBPACK_IMPORTED_MODULE_6__[\"chatStyles\"])();\r\n    // Chat画面が呼ばれる前に値を設定\r\n    var name = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"useSelector\"])(_top_topSlice__WEBPACK_IMPORTED_MODULE_4__[\"selectName\"]);\r\n    // signIn()のレスポンスを設定\r\n    var signInMessage = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"useSelector\"])(_chatSlice__WEBPACK_IMPORTED_MODULE_5__[\"selectSignInMessage\"]);\r\n    // チャット内容を設定\r\n    var messageList = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"useSelector\"])(_chatSlice__WEBPACK_IMPORTED_MODULE_5__[\"selectMessageList\"]);\r\n    Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\r\n        console.log(\"signIn\");\r\n        Object(_Socket__WEBPACK_IMPORTED_MODULE_3__[\"signIn\"])(name);\r\n    }, []);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__[\"Container\"], { component: \"main\", maxWidth: \"sm\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", { className: classes.tittle },\r\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__[\"Typography\"], { component: \"h1\", variant: \"h2\" }, \"chat app.\"),\r\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__[\"TextField\"], { variant: \"outlined\", margin: \"normal\", required: true, fullWidth: true, id: \"userName\", label: \"User Name\", name: \"userName\", autoComplete: \"userName\", autoFocus: true, value: name }),\r\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__[\"Button\"], { type: \"submit\", fullWidth: true, variant: \"contained\", color: \"primary\" }, \"send\"))));\r\n}\r\n\n\n//# sourceURL=webpack:///./src/features/Chat/Chat.tsx?");
+
+/***/ }),
+
+/***/ "./src/features/Chat/ChatStyle.ts":
+/*!****************************************!*\
+  !*** ./src/features/Chat/ChatStyle.ts ***!
+  \****************************************/
+/*! exports provided: chatStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"chatStyles\", function() { return chatStyles; });\n/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material-ui/core */ \"./node_modules/@material-ui/core/esm/index.js\");\n\r\nvar chatStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_0__[\"makeStyles\"])(function (theme) { return ({\r\n    tittle: { textAlign: \"center\", fontSize: 42, margin: \"100px\" },\r\n    back: { backgroundColor: theme.palette.grey.A100 },\r\n}); });\r\n\n\n//# sourceURL=webpack:///./src/features/Chat/ChatStyle.ts?");
+
+/***/ }),
+
+/***/ "./src/features/app/App.tsx":
+/*!**********************************!*\
+  !*** ./src/features/app/App.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _Socket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Socket */ \"./src/Socket.tsx\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _Chat_Chat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Chat/Chat */ \"./src/features/Chat/Chat.tsx\");\n/* harmony import */ var _top_Top__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../top/Top */ \"./src/features/top/Top.tsx\");\n/* harmony import */ var _appSlice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./appSlice */ \"./src/features/app/appSlice.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nfunction App() {\r\n    var displayNo = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"useSelector\"])(_appSlice__WEBPACK_IMPORTED_MODULE_6__[\"selectDisplayNo\"]);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null,\r\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"BrowserRouter\"], null,\r\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Switch\"], null,\r\n                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Route\"], { exact: true, path: \"/\", component: _top_Top__WEBPACK_IMPORTED_MODULE_5__[\"Top\"] }),\r\n                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Route\"], { path: \"/chat\", component: _Chat_Chat__WEBPACK_IMPORTED_MODULE_4__[\"Chat\"] }))),\r\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Socket__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)));\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\r\n\n\n//# sourceURL=webpack:///./src/features/app/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hot-loader */ \"./node_modules/react-hot-loader/index.js\");\n/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _features_app_App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./features/app/App */ \"./src/features/app/App.tsx\");\n/* harmony import */ var _app_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/store */ \"./src/app/store.ts\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./serviceWorker */ \"./src/serviceWorker.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar render = function () {\r\n    react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hot_loader__WEBPACK_IMPORTED_MODULE_2__[\"AppContainer\"], null,\r\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_5__[\"Provider\"], { store: _app_store__WEBPACK_IMPORTED_MODULE_4__[\"store\"] },\r\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_features_app_App__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null))), document.querySelector(\"#root\"));\r\n};\r\nrender();\r\n// Hot reloading\r\nif (true) {\r\n    // Reload components\r\n    module.hot.accept(!(function webpackMissingModule() { var e = new Error(\"Cannot find module './App'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {\r\n        render();\r\n    })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\r\n}\r\n_serviceWorker__WEBPACK_IMPORTED_MODULE_6__[\"unregister\"]();\r\n\n\n//# sourceURL=webpack:///./src/index.tsx?");
+
+/***/ })
+
+})
