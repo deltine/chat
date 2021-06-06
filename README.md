@@ -5,7 +5,7 @@ socket.io 3.1.1
 webpack 4.44.2
 express 4.17.1
 
-・vscode pacage
+・vscode package
 
 - Prettier - Code formatter
   https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
